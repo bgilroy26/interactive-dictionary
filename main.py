@@ -20,6 +20,12 @@ while True:
 
     if word == 'EXIT':
         sys.exit()
-
-    print(lookup(word))
+    
+    output = lookup(word)
+    
+    if type(output) == str:
+        print(output)
+    else:
+        for i, definition in enumerate(output):
+            print(str(i+1) + ". " + definition)
 
